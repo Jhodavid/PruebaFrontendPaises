@@ -1,0 +1,232 @@
+
+body{
+    font-family: sans-serif;
+    background-color: rgba(0, 255, 255, 0.116);
+    margin: 0;
+}
+
+/* ----BARRA DE NAVEGACIÓN---- */
+
+.barraNavegacion{
+    background-color: #000000;
+    height: 110px;
+    text-align: center;
+    display: flex;
+}
+
+.buscador{
+    background-color: #ffffff;
+    color: #000000;
+    width: 70%;
+    height: 38px;
+    margin: 30px 0 30px 17%;
+    padding-left: 20px;
+    border: 1px rgba(0, 255, 255, 0.116);
+    border-radius: 20px 0 0 20px;
+}
+
+.barraNavegacion a{
+    background-color: #ffffff;
+    width: 6%;
+    height: 40px;
+    margin: 30px 17% 30px 0;
+    padding: 0;
+    border-left: 1.5px solid #000000;
+    border-radius: 0 20px 20px 0;
+}
+
+.imgBuscar{
+    width: auto;
+    height: 90%;
+    margin: 0;
+    padding: 5%;
+    border: none;
+}
+
+/* HOVER  */
+
+.barraNavegacion a:hover{
+    background-color: rgb(127, 255, 212);
+    transition: .5s;
+}
+
+
+/* ----LISTA DE PAISES---- */
+
+.contenedorLista{
+    background-color: rgba(127, 255, 212, 0.356);
+    margin: 10px 0 0 0;
+    border-radius: 10px;
+}
+
+.listaContinentes{
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
+}
+
+.continente h2{
+    margin: 6px 0 2px 0;
+    padding: 6px 0 6px 0;
+    height: auto;
+    text-align: center;
+    background-color: #3410d311;;
+    border-radius: 30px 30px 0 0;
+    border-bottom: 1px solid #3410d3a6;
+}
+
+.listaPaises{
+    padding: 12px;
+    height: auto;
+    border-left: 1px solid rgb(0, 162, 255);
+    border-right: 1px solid rgb(0, 162, 255);
+}
+
+/* ESTILOS PARA CARDS EN JAVASCRIPT */
+
+.adivPais{
+    text-decoration: none;
+    color: #000000;
+}
+
+.divPais{
+    margin: 4px 0 6px 0;
+    padding: 0;
+    width: auto;
+    height: 40px;
+    border-bottom: 1px solid rgba(0, 162, 255, 0.267);
+    display: flex;
+}
+
+.divImgBandera{
+    width: 15%;
+    height: auto;
+}
+
+.imgBandera{
+    margin-top: 5px;
+    width: 80%;
+}
+
+.pNombre{
+    margin: 0;
+    height: auto;
+    width: 69%;
+}
+
+.imgFavorito{
+    width: 14%;
+    padding: 5px;
+    height: auto;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.imgFavoritoSelect{
+    background-color: rgba(255, 0, 0, 0.616);
+    visibility: visible;
+}
+
+/* HOVER */
+
+.divPais:hover{
+    background-color: rgba(0, 162, 255, 0.267);
+    border-radius: 5px;
+}
+
+/* MEDIA QUERIES */
+
+/* @media (max-width: 575.98px) {
+    .barraNavegacion{
+       font-size: 30px;
+    }
+} */
+
+@media (max-width: 767.98px) {
+    .listaContinentes{
+        grid-template: 1fr / 1fr;
+    }
+    .divPais{
+        width: 50vw;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .listaContinentes{
+        grid-template: 1fr / 1fr 1fr;
+    }
+    .divPais{
+        width: 50vw;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .listaContinentes{
+        grid-template: 1fr / 1fr 1fr 1fr;
+    }
+    .divPais{
+        width: 30vw;
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .buscador{
+        font-size: 20px;
+    }
+}
+
+
+.contenedorModalDetalle {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-top: 10px solid #58abb7;
+    width: 60%;
+}
+
+.cerrar {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar:hover, .cerrar:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contenedor{
+    position: static;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+.divContenedorDetalle{
+    display: grid;
+    grid-template: 1fr / 1fr 200px;
+}
+
+.divBandera{
+    text-align: center;
+    width: 200px;
+}
+
+.divBanderaD{
+    margin-top: 50px;
+}

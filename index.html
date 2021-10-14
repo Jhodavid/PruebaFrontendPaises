@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <title>Países</title>
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="barraNavegacion">
+        <input class="buscador" type="text" placeholder="Nombre del país" />
+        <a id="Buscar" href="#">
+          <img class="imgBuscar" src="img/IconBuscar.png" />
+        </a>
+      </div>
+
+      <div class="contenedorLista">
+        <div class="listaContinentes">
+          <div class="continente">
+            <h2>Africa</h2>
+            <div class="listaAfrica listaPaises"></div>
+          </div>
+          <div class="continente">
+            <h2>America</h2>
+            <div class="listaAmerica listaPaises"></div>
+          </div>
+          <div class="continente">
+            <h2>Asia</h2>
+            <div class="listaAsia listaPaises"></div>
+          </div>
+          <div class="continente">
+            <h2>Europa</h2>
+            <div class="listaEuropa listaPaises"></div>
+          </div>
+          <div class="continente">
+            <h2>Oceania</h2>
+            <div class="listaOceania listaPaises"></div>
+          </div>
+          <div class="continente">
+            <h2>Polar</h2>
+            <div class="listaPolar listaPaises"></div>
+          </div>
+          <div class="continente">
+            <h2>Antarctic</h2>
+            <div class="listaAntarctic listaPaises"></div>
+          </div>
+          <div class="continente">
+            <h2>Antarctic Ocean</h2>
+            <div class="listaAntarcticOc listaPaises"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="tvesModal" class="contenedorModalDetalle">
+        <div class="modal-content">
+          <span class="cerrar">x</span>
+        </div>
+      </div>
+      
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
