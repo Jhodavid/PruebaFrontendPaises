@@ -48,10 +48,6 @@ fetch(`${API_URL}`)
       aDivPais.href = "#";
       aDivPais.addEventListener("click", (e) => {
         
-        if (e.target.classList.contains("imgFavorito")) {
-          console.log("click imgFavorito");
-        }
-        
         // LIMPIAMOS MODAL
 
         limpiarModal();
@@ -123,12 +119,10 @@ fetch(`${API_URL}`)
 
         const pMonedaD = document.createElement("p");
         pMonedaD.classList.add("pDetalle");
-        console.log(moneda);
         pMonedaD.textContent = `Moneda: ${moneda[0].name} - ${moneda[0].symbol}`;
 
         const pIdiomaD = document.createElement("p");
         pIdiomaD.classList.add("pDetalle");
-        console.log(idioma);
         pIdiomaD.textContent = `Idioma: ${idioma[0].name}`;
 
         const pPaisesFronterizosD = document.createElement("p");
@@ -230,7 +224,6 @@ fetch(`${API_URL}`)
     let buscado;
 
     btnBuscar.addEventListener("click", () => {
-      console.log(inputBuscar.value);
       pNombrePais.forEach((pais) => {
         buscado = document.querySelector(`#${pais.id}`);
         if (pais.textContent === inputBuscar.value) {
