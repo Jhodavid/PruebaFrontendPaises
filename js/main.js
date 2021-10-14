@@ -133,7 +133,7 @@ fetch(`${API_URL}`)
 
         const pPaisesFronterizosD = document.createElement("p");
         pPaisesFronterizosD.classList.add("pDetalle");
-        pPaisesFronterizosD.textContent = paisesFronterizos;
+        pPaisesFronterizosD.textContent = `Paises fronterizos: ${paisesFronterizos}`;
 
         const imgBanderaD = document.createElement("img");
         imgBanderaD.classList.add("imgBandera");
@@ -142,9 +142,10 @@ fetch(`${API_URL}`)
         const pUbicacionD = document.createElement("a");
         pUbicacionD.classList.add("pDetalle");
         pUbicacionD.textContent = "Ubicacion";
-        console.log(ubicacion);
         if (ubicacion !== undefined) {
-          pUbicacionD.href = `https://www.google.es/maps?q=${ubicacion[0]},${ubicacion[1]}`;
+          pUbicacionD.href = `https://www.google.es/maps?q=4,5`;
+        }else{
+          pUbicacionD.href = "#";
         }
 
         pUbicacionD.href = divDetallesD.appendChild(h3NombrePaisD);
