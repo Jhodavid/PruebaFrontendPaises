@@ -13,6 +13,7 @@ const listaAntarcticOc = document.querySelector(".listaAntarcticOc");
 const modalDetalles = document.querySelector(".modal-content");
 
 let totalPaises = [];
+let i = 0;
 
 // OBTENIENDO DATOS NECESARIOS DE LOS PAÍSES
 
@@ -137,7 +138,7 @@ fetch(`${API_URL}`)
         const pUbicacionD = document.createElement("a");
         pUbicacionD.classList.add("pDetalle");
         pUbicacionD.textContent = "Ubicacion";
-        console.log(ubicacion)
+        console.log(ubicacion);
         if (ubicacion !== undefined) {
           pUbicacionD.href = `https://www.google.es/maps?q=${ubicacion[0]},${ubicacion[1]}`;
         }
@@ -168,6 +169,7 @@ fetch(`${API_URL}`)
 
       const pNombre = document.createElement("p");
       pNombre.classList.add("pNombre");
+      pNombre.id = "id" + i;
       pNombre.textContent = nombre;
 
       const imgFavorito = document.createElement("img");
@@ -181,6 +183,7 @@ fetch(`${API_URL}`)
         }
       });
 
+      i++;
       // ASIGNACIÓN DE HIJOS
 
       divImgBandera.appendChild(imgBandera);
@@ -211,7 +214,28 @@ fetch(`${API_URL}`)
         listaAntarcticOc.appendChild(aDivPais);
       }
     });
+
+    // METODO BUSCAR
+
+    const pNombrePais = document.querySelectorAll(".pNombre");
+    const inputBuscar = document.querySelector(".buscador");
+    const btnBuscar = document.querySelector("#Buscar");
+    let buscado;
+
+    btnBuscar.addEventListener("click", () => {
+      console.log(inputBuscar.value);
+      pNombrePais.forEach((pais) => {
+        
+        buscado = document.querySelector(`#${pais.id}`);
+        if (pais.textContent === inputBuscar.value) {
+          btnBuscar.href = `#${pais.id}`;
+          buscado.parentNode.classList.add("buscadoSelect");
+        }
+      });
+    });
   });
+
+// FUNCIONES EXTERNAS
 
 function limpiarModal() {
   while (modalDetalles.childNodes[2]) {
