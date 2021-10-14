@@ -183,6 +183,10 @@ body{
     grid-template: 1fr / 1fr 200px;
 }
 
+.pDetalle{
+    max-width: 300px;
+}
+
 .divBandera{
     text-align: center;
     width: 200px;

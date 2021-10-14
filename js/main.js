@@ -46,7 +46,12 @@ fetch(`${API_URL}`)
       const aDivPais = document.createElement("a");
       aDivPais.classList.add("adivPais");
       aDivPais.href = "#";
-      aDivPais.addEventListener("click", () => {
+      aDivPais.addEventListener("click", (e) => {
+        
+        if (e.target.classList.contains("imgFavorito")) {
+          console.log("click imgFavorito");
+        }
+        
         // LIMPIAMOS MODAL
 
         limpiarModal();
@@ -70,7 +75,6 @@ fetch(`${API_URL}`)
         window.onclick = function (event) {
           if (event.target == modal) {
             modal.style.display = "none";
-
             body.style.position = "inherit";
             body.style.height = "auto";
             body.style.overflow = "visible";
@@ -157,6 +161,8 @@ fetch(`${API_URL}`)
         modalDetalles.appendChild(divContenedorDetalleD);
       });
 
+      // CREADO Y LLENADO DE CARDS
+
       const divPais = document.createElement("div");
       divPais.classList.add("divPais");
 
@@ -225,7 +231,6 @@ fetch(`${API_URL}`)
     btnBuscar.addEventListener("click", () => {
       console.log(inputBuscar.value);
       pNombrePais.forEach((pais) => {
-        
         buscado = document.querySelector(`#${pais.id}`);
         if (pais.textContent === inputBuscar.value) {
           btnBuscar.href = `#${pais.id}`;
