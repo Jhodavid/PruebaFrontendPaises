@@ -52,7 +52,7 @@ fetch(`${API_URL}`)
 
         // LLENADO DE MODAL DE DETALLE
 
-        const modal = document.querySelector("#tvesModal");
+        const modal = document.querySelector("#idModal");
         const cerrar = document.getElementsByClassName("cerrar")[0];
         const body = document.getElementsByTagName("body")[0];
 
@@ -61,7 +61,6 @@ fetch(`${API_URL}`)
 
         cerrar.onclick = function () {
           modal.style.display = "none";
-
           body.style.position = "inherit";
           body.style.height = "auto";
           body.style.overflow = "visible";
