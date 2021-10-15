@@ -137,12 +137,13 @@ fetch(`${API_URL}`)
         pUbicacionD.classList.add("pDetalle");
         pUbicacionD.textContent = "Ubicacion";
         if (ubicacion !== undefined) {
-          pUbicacionD.href = `https://www.google.es/maps?q=4,5`;
+          pUbicacionD.href = `https://www.google.es/maps?q=${ubicacion[0]},${ubicacion[1]}`;
         }else{
           pUbicacionD.href = "#";
         }
 
-        pUbicacionD.href = divDetallesD.appendChild(h3NombrePaisD);
+        // pUbicacionD.href = divDetallesD.appendChild(h3NombrePaisD); Este era el error en la Ubicación
+        divDetallesD.appendChild(h3NombrePaisD)                        /////////////////////////////////
         divDetallesD.appendChild(pRegionD);
         divDetallesD.appendChild(pPoblacionD);
         divDetallesD.appendChild(pCapitalD);
